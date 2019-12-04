@@ -28,8 +28,11 @@
   "cds": {
     "requires": {
       "db": {
-        "kind": "sql",
+        "kind": "sqlite",
         "model": "db"
+      }, 
+      "credentials": {
+        "database": "northbreeze.db"
       }
     }
   }
