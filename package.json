@@ -21,7 +21,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cds deploy && cds run"
+    "start": "cds deploy && cds run",
+    "watch": "npx nodemon -e cds,js -w srv -w db -x \"cds deploy && cds run\""
   },
   "keywords": [],
   "author": "",
@@ -29,8 +30,11 @@
     "requires": {
       "db": {
         "kind": "sqlite",
-        "model": "db"
-      }, 
+        "model": "db",
+        "credentials": {
+          "database": "northbreeze.db"
+        }
+      },
       "credentials": {
         "database": "northbreeze.db"
       }
